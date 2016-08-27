@@ -21,7 +21,7 @@
 |	['dbprefix'] You can add an optional prefix, which will be added
 |				 to the table name when using the  Active Record class
 |	['pconnect'] TRUE/FALSE - Whether to use a persistent connection
-|	['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
+|	['db_debug'] TRUE/FALSE - Whether database errors should be dispfalsed.
 |	['cache_on'] TRUE/FALSE - Enables/disables query caching
 |	['cachedir'] The path to the folder where cache files should be stored
 |	['char_set'] The character set used in communicating with the database
@@ -47,22 +47,54 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
+$dbg = true;
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
+$db['default']['username'] = 'root';
 $db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['database'] = 'dev';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
+$db['default']['pconnect'] = true;
+$db['default']['db_debug'] = $dbg; 
+$db['default']['cache_on'] = FALSE; 
 $db['default']['cachedir'] = '';
 $db['default']['char_set'] = 'utf8';
 $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+$db['student']['hostname'] = 'localhost';
+$db['student']['username'] = 'root';
+$db['student']['password'] = '';
+$db['student']['database'] = 'dev';
+$db['student']['dbdriver'] = 'mysql';
+$db['student']['dbprefix'] = '';
+$db['student']['pconnect'] = TRUE;
+$db['student']['db_debug'] = TRUE; 
+$db['student']['cache_on'] = FALSE; 
+$db['student']['cachedir'] = '';
+$db['student']['char_set'] = 'utf8';
+$db['student']['dbcollat'] = 'utf8_general_ci';
+$db['student']['swap_pre'] = '';
+$db['student']['autoinit'] = TRUE;
+$db['student']['stricton'] = FALSE;
+
+$db['hostels']['hostname'] = 'localhost';
+$db['hostels']['username'] = 'root';
+$db['hostels']['password'] = '';
+$db['hostels']['database'] = 'wsdc_hostels_2016';
+$db['hostels']['dbdriver'] = 'mysql';
+$db['hostels']['dbprefix'] = '';
+$db['hostels']['pconnect'] = false;
+$db['hostels']['db_debug'] = $dbg; 
+$db['hostels']['cache_on'] = TRUE;
+$db['hostels']['cachedir'] = '';
+$db['hostels']['char_set'] = 'utf8';
+$db['hostels']['dbcollat'] = 'utf8_general_ci';
+$db['hostels']['swap_pre'] = '';
+$db['hostels']['autoinit'] = TRUE;
+$db['hostels']['stricton'] = FALSE;
 
 
 /* End of file database.php */
